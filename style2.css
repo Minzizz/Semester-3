@@ -1,0 +1,44 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    line-height: 1.65;
+    padding-bottom: 500px;
+    background-image: url(img/bg1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0 -100px;
+}
+.container-satu{
+    display: flex;
+    width: 800px;
+    margin: 50px auto;
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    box-sizing: border-box;
+    border: orange 1px solid;
+}
+.sidebar-satu{
+    width: 20%;
+    padding:10px;
+    order: 1;
+    border: orange 1px solid;
+    background-color: rgb(41, 36, 36);
+}
+
+.kolom-utama{
+    width: 60%;
+    padding: 10px;
+    order: 2;
+}
+.sidebar-dua{
+    width: 20%;
+    padding:10px;
+    order: 3;
+    border: orange 1px solid;
+    background-color: rgb(41, 36, 36)
+}
