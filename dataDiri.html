@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Diri - Accordion</title>
+
+  <!-- jQuery & jQuery UI -->
+  <script src="praktik_jquery/jquery-3.7.1.js"></script>
+  <link rel="stylesheet" href="praktik_jquery/jquery-ui-1.14.1/jquery-ui-1.14.1/jquery-ui.css">
+  <script src="praktik_jquery/jquery-ui-1.14.1/jquery-ui-1.14.1/jquery-ui.js"></script>
+
+  <style>
+    body {
+      background-color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      background-color: #ccc;
+      padding: 15px;
+      border-bottom: 2px solid orange;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 80vh;
+      padding: 40px 0;
+    }
+
+    #accordion {
+      width: 600px;
+      background-color: #f7f7f7;
+      border: 2px solid orange;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid orange;
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 10px;
+      border: 2px solid orange;
+      border-radius: 6px;
+      max-width: 150px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #ccc;
+      border-top: 2px solid orange;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Data Diri Saya</header>
+
+  <main>
+    <div id="accordion">
+      <!-- Bagian 1 -->
+      <h3>Data Diri</h3>
+      <div>
+        <img src="img/gweh.JPG" alt="Foto Profil">
+        <table>
+          <tr><th>Nama</th><td>Amin Aziz Sudjud</td></tr>
+          <tr><th>Tanggal Lahir</th><td>29 Desember 2005</td></tr>
+          <tr><th>Agama</th><td>Islam</td></tr>
+        </table>
+      </div>
+
+      <!-- Bagian 2 -->
+      <h3>Riwayat Sekolah</h3>
+      <div>
+        <table>
+          <tr><th>Jenjang</th><th>Nama Sekolah</th><th>Tahun</th></tr>
+          <tr><td>SD</td><td>SDIT Ummul Quro Bogor</td><td>2012 - 2018</td></tr>
+          <tr><td>SMP</td><td>SMPIT Zaid Bin Tsabit</td><td>2018 - 2021</td></tr>
+          <tr><td>SMA</td><td>SMA Negeri 2 Bogor</td><td>2021 - 2024</td></tr>
+        </table>
+      </div>
+
+      <!-- Bagian 3 -->
+      <h3>Kampus Saat Ini</h3>
+      <div>
+        <table>
+          <tr><th>Nama Kampus</th><td>Politeknik Negeri Malang</td></tr>
+          <tr><th>Jurusan</th><td>Teknologi Informasi</td></tr>
+          <tr><th>Program Studi</th><td>Teknik Informatika</td></tr>
+          <tr><th>Tahun Masuk</th><td>2024</td></tr>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Data Diri Placeholder — Contoh jQuery UI Accordion
+  </footer>
+
+  <script>
+    $(function() {
+      $("#accordion").accordion({
+        collapsible: true,
+        active: false,
+        heightStyle: "content"
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wiki Dasar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #050505;
+      color: #000000;
+      margin: 0;
+      padding: 0;
+      background: url(img/hkBG.png) no-repeat;
+      background-size: cover;
+      min-height: 100vh;
+      flex-direction: column;
+      display: flex;
+    }
+
+    header, nav, main, aside, footer {
+      border: 2px solid orange;
+      background-color: rgba(245, 245, 245, 0.5);
+      padding: 10px;
+      margin: 10px;
+    }
+
+    header {
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+      background-color: transparent;
+        border: none;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav li {
+      display: inline-block;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      background-color: #ccc;
+      padding: 6px 12px;
+      border-radius: 5px;
+      border: 1px solid orange;
+    }
+
+    nav a:hover {
+      background-color: #bbb;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-bottom: 100px;
+      flex: 1;
+    }
+
+    article {
+      flex: 2;
+      min-width: 300px;
+      border: 2px solid orange;
+      background-color: #ffffff;
+      padding: 15px;
+    }
+
+    aside {
+      border: 2px solid orange;
+      background-color: #f8f8f8;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #d9d9d9;
+      font-size: 0.9em;
+      padding: 10px;
+    }
+
+    h2, h3 {
+      border-bottom: 1px solid orange;
+      padding-bottom: 4px;
+    }
+
+    .infobox {
+      border: 2px solid orange;
+      background-color: #eee;
+      margin-top: 10px;
+      padding: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 10px;
+    }
+
+    th, td {
+      border: 1px solid orange;
+      padding: 6px 10px;
+      text-align: left;
+    }
+
+    .highlight {
+      background-color: #fff0d4;
+      border: 1px solid orange;
+      padding: 4px;
+    }
+  </style>
+  <script src="praktik_jquery/jquery-3.7.1.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("nav a").on("click", function(e) {
+        e.preventDefault();
+        $("article").hide();
+        const target = $(this).attr("href");
+        $(target).fadeIn();
+        $("nav a").removeClass("active");
+        $(this).addClass("active");
+      });
+      $("article").hide();
+      $("#beranda").show();
+      $("#linkWiki").click(function() {
+        window.open("https://calamitymod.wiki.gg/", "_blank");
+      });
+      $("#linkProfil").click(function() {
+        window.location ="dataDiri.html";
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <img src="img/header.png" alt="header img" style="height: 120px;">
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#beranda" class="active">Beranda</a></li>
+      <li><a href="#artikel1">Artikel 1</a></li>
+      <li><a href="#artikel2">Artikel 2</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <article id="beranda">
+      <h2>Selamat Datang di Profil Saya</h2>
+      <p>Nama saya adalah Amin Aziz Sudjud. Di sini saya akan membahas beberapa hal terkait dengan pembelajaran Dasar Web</p>
+      <div class="infobox">
+        <strong>Info Singkat:</strong>
+        <p>Saya akan membahas dasar HTML, CSS, dan jQuery.</p>
+      </div>
+    </article>
+
+    <article id="artikel1">
+      <h2>Artikel 1: Dasar HTML</h2>
+      <p>HTML digunakan untuk membangun struktur halaman web. Elemen-elemen seperti <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, dan <code>&lt;footer&gt;</code> membantu membuat layout yang jelas.</p>
+      <table>
+        <thead>
+          <tr><th>Tag</th><th>Fungsi</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>&lt;h1&gt;</code></td><td>Judul utama</td></tr>
+          <tr><td><code>&lt;p&gt;</code></td><td>Paragraf teks</td></tr>
+          <tr><td><code>&lt;img&gt;</code></td><td>Menampilkan gambar</td></tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article id="artikel2">
+      <h2>Artikel 2: CSS dan jQuery</h2>
+      <p>CSS mengatur tampilan halaman, seperti warna, jarak, dan posisi elemen. jQuery mempermudah manipulasi DOM dan efek animasi.</p>
+      <div class="highlight">Contoh efek: klik tab di atas untuk mengganti artikel!</div>
+    </article>
+
+    <aside>
+      <h3>Misc</h3>
+        <button id="linkWiki">Wiki Inspired By</button>
+        <br><br>
+        <button id="linkProfil">Kontributor</button>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© Wiki Diri Sendiri.</p>
+  </footer>
+</body>
+</html>
