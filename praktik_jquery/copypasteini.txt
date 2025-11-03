@@ -1,0 +1,7 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styleSlideShow.css" type="text/css">
+        <script src="jquery-3.7.1.js"></script>
+        <script src="jquery-ui-1.14.1/jquery-ui-1.14.1/jquery-ui.js"></script>
+    </head>
+</html>

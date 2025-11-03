@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Contoh Form dengan PHP</title>
+    </head>
+    <body>
+        <h2>Form Contoh</h2>
+        <form method="POST" action="proses_lanjut.php">
+            <label for="buah">Pilih Buah:</label>
+            <select id="buah" name="buah" required>
+                <option value="apel">Apel</option>
+                <option value="pisang">Pisang</option>
+                <option value="jeruk">Jeruk</option>
+                <option value="mangga">Mangga</option>
+            </select><br>
+
+            <label>Pilih Warna Favorit:</label><br>
+            <input type="checkbox" name="warna[]" value="merah"> Merah<br>
+            <input type="checkbox" name="warna[]" value="biru"> Biru<br>
+            <input type="checkbox" name="warna[]" value="hijau"> Hijau<br>
+
+            <br>
+
+            <label>Pilih Jenis Kelamin:</label>
+            <br>
+            <input type="radio" name="gender" value="pria" required> Pria <br>
+            <input type="radio" name="gender" value="wanita" required> Wanita <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
