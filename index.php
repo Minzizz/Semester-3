@@ -136,13 +136,13 @@ if (!$result) {
                 <td><?= htmlspecialchars($row['Tahun'], ENT_QUOTES, 'utf-8'); ?></td>
                 <td class="ps-2"><?= htmlspecialchars($row['Sekolah'], ENT_QUOTES, 'utf-8'); ?></td>
                 <td class="text-end">
-                  <form action="editThnSklh.php" method="GET" class="d-inline">
+                  <form action="UTS/editThnSklh.php" method="GET" class="d-inline">
                     <input type="hidden" name="tahun" value="<?= htmlspecialchars($row['Tahun']); ?>">
                     <button type="submit" class="btn btn-warning btn-sm">
                       Edit
                     </button>
                   </form>
-                  <form action="deleteThnSklh.php" method="POST">
+                  <form action="UTS/deleteThnSklh.php" method="POST">
                     <input type="hidden" name="tahun" value="<?= htmlspecialchars($row['Tahun']); ?>">
                     <button type="submit" class="btn btn-danger btn-sm">
                       Hapus
@@ -155,7 +155,7 @@ if (!$result) {
             </form>
           </tbody>
         </table>
-        <a class="btn btn-success btn-sm position-absolute top-1 end-0 me-3" id="tambahBtn" href="createThnSklh.php">
+        <a class="btn btn-success btn-sm position-absolute top-1 end-0 me-3" id="tambahBtn" href="UTS/createThnSklh.php">
           <strong>+ Tambah</strong>
         </a>
       </div>
