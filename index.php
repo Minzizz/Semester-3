@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
+}
 $host = 'localhost';
 $port = '5433';
 $user = 'postgres';
@@ -85,8 +90,8 @@ if (!$result) {
           </li>
         </ul>
       </div>
-      <a href="https://tenor.com/view/terraria-terraria-calamity-yharon-gif-16495104219187473463" target="_blank">
-        <img src="img/patpatYharon.gif" alt="patpatYharon" style="width: 50px; padding-bottom: 7px;">
+      <a href="logout.php" class="btn btn-success rounded">
+        Logout <img src="img/patpatYharon.gif" alt="patpatYharon" style="width: 25px; padding-bottom: 7px;">
       </a>
 
     </div>
@@ -136,13 +141,13 @@ if (!$result) {
                 <td><?= htmlspecialchars($row['Tahun'], ENT_QUOTES, 'utf-8'); ?></td>
                 <td class="ps-2"><?= htmlspecialchars($row['Sekolah'], ENT_QUOTES, 'utf-8'); ?></td>
                 <td class="text-end">
-                  <form action="UTS/editThnSklh.php" method="GET" class="d-inline">
+                  <form action="editThnSklh.php" method="GET" class="d-inline">
                     <input type="hidden" name="tahun" value="<?= htmlspecialchars($row['Tahun']); ?>">
                     <button type="submit" class="btn btn-warning btn-sm">
                       Edit
                     </button>
                   </form>
-                  <form action="UTS/deleteThnSklh.php" method="POST">
+                  <form action="deleteThnSklh.php" method="POST">
                     <input type="hidden" name="tahun" value="<?= htmlspecialchars($row['Tahun']); ?>">
                     <button type="submit" class="btn btn-danger btn-sm">
                       Hapus
@@ -155,7 +160,7 @@ if (!$result) {
             </form>
           </tbody>
         </table>
-        <a class="btn btn-success btn-sm position-absolute top-1 end-0 me-3" id="tambahBtn" href="UTS/createThnSklh.php">
+        <a class="btn btn-success btn-sm position-absolute top-1 end-0 me-3" id="tambahBtn" href="createThnSklh.php">
           <strong>+ Tambah</strong>
         </a>
       </div>
